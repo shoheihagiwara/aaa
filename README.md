@@ -6,6 +6,7 @@ my knowledge base application. 仕事に必要な情報を簡単に探し出せ�
 
 実行は以下のようにしたい。
 
+```bash
 perl aaa.py
 $ Hello. What are you are searching for? (mark the end of your query with "#eof" please)
 $ Type "suggestions?" for suggestions, "help?" for help.
@@ -30,5 +31,5 @@ adig haqrglb alrk grbl grhgl;rhg;ohawrng ;earg qrg hqr;
 afgia lhrgiberbg jregbi32u4jthg39i5hnr 9i4hg 97342g 223iowasl zbfibua
 
 ...
-
+```
 
