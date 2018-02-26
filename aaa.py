@@ -392,12 +392,37 @@ class HyperlinkManager:
                 return
 
 
+def getUserQuery() -> str:
+    """ ユーザーから検索キーワードを受け取り返す。
 
+    :rtype: str ユーザーからの検索キーワード
+    """
+
+    query = ""
+
+    try:
+        while True:
+            line = input()
+            query = query + " " + line
+
+            if len(query) > 3 and query[-4:] == "#eof":
+                break
+    except EOFError:
+        print("""\n$ Oh okay. I'll stop if you want me to :)""")
+        exit(0)
+
+    return query
 
 
 if __name__ == '__main__':
-    root = Tk()
-    aaa(root)
-    root.mainloop()
 
+    print()
+    print(r"""$ Hello. What are you are searching for? (mark the end of your query with "#eof" please)""")
+    print(r"""$ Type "suggestions?" for suggestions, "help?" for help.""")
+    print()
+    print(r"""> (I'm looking for): """, end="")
+
+    query = getUserQuery()
+
+    print("You have typed: " + query)
 
